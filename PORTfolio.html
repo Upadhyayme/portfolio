@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgb(0, 0, 33);
+            color: antiquewhite;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+            background-color: rgb(3, 3, 48);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(245, 243, 240);
+        }
+        nav ul li a:hover {
+            color: #ecf0f1;
+            background-color: rgb(3, 125, 119);
+        }
+        .left {
+            font-size: 1.5rem;
+        }
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 120px 0;
+        }
+        .firstSection > div {
+            width: 30%;
+        }
+        .leftSection {
+            font-size: 1rem;
+        }
+        .rightSection img {
+            width: 80%;
+        }
+        .rightSection :hover {
+         border: 3px solid palevioletred ;
+         width:  83%;
+        }
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+        .secondSection .box {
+            background: rgb(3, 3, 3);
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+        .purple {
+            color: #aa79d5;
+        }
+        #element {
+            color: #aa79d5;
+        }
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+        footer {
+            background-color: rgb(125, 11, 239);
+        }
+        .footer {
+            display: flex;
+            margin: 112px 112px;
+            justify-content: center;
+        }
+        .footer > div {
+            width: 223px;
+        }
+        .footer-rights {
+            text-align: center;
+            color: grey;
+            padding: 8px 0;
+        }
+        .leftSection .button{
+            padding: 16px 0;
+        }
+        .leftSection .btn {
+            background-color: #65368e;
+            color: white;
+            border: 2px solid white;
+            border-radius: 4px;
+            font-size: 20px;
+            padding: 12px;
+        }
+        .btn:hover{
+          border:2px solid palevioletred ;
+          color: aqua;
+        }
+        /* Project grid styles */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: linear-gradient(#65368e,#562c7a);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #dfd8d8;
+        }
+
+        .project-card p {
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">My Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="./About.html">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hello, I'm <span class="purple">Shreya Upadhyay</span>
+                <div>and I am a</div>
+                <span id="element"></span> <br> <br>    
+                <button class="btn">Download Resume</button>
+                <br> <br><br>
+              <a href="https://www.github.com/Upadhyayme"><button class="btn">Visit Github</button></a>
+            </div>
+            <div class="rightSection">
+              <img src="bg.jpeg" alt="">
+            </div>
+        </section>
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+              <div class="home__content grid">
+                <div class="home__social">
+                    <i class="uil uil-linkedin-alt home__icon"></i>
+                  <a href="https://www.github.com/Upadhyayme" target="_blank" class="home__social-icon">
+                    <i class="uil uil-github-alt home__icon"></i></a>
+              </div>
+            </div>
+          </section>
+          
+          <section id="projects">
+            <h2>My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Snake game</h3>
+                        <p>Developed a snake game using cpp.this game is devloped for pc only.</p>
+                        <button class="btn"><a href="https://github.com/Upadhyayme/snake_game">View project</a></button>
+                    </div>
+                    <div class="project-card">
+                        <h3>Memory game</h3>
+                        <p>Developed a memory game using HTML.</p>
+                        <button class="btn"><a href="https://github.com/Upadhyayme/Html_CSS_projects/blob/main/Memorygame.html">View project</a></button>
+                    </div>
+                    <div class="project-card">
+                      <h4>Digital clock</h4>
+                      <p>Developed a digital clock using cpp. CPP is used for both styling and functioning.</p>
+                      <button class="btn"><a href="https://github.com/Upadhyayme/digitalClock">View project</a></button>
+                  </div>
+                </div>
+            </section>
+    <footer>
+        <div class="footer">
+        <div class="footer-rights">
+        <p>Copyright &#169; www.ShreyaPortfolio.com | All rights are reserved</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Software Developer', 'Video Editor'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+</html>
